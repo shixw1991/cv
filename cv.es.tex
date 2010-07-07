@@ -1,0 +1,128 @@
+\documentclass[letter,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					    %for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage[big]{layaureo} 				%better formatting of the A4 page
+%\usepackage{fullpage}                       % an alternative to Layaureo can
+\usepackage{supertabular} 				    %for Grades
+\usepackage{titlesec}					    %custom \section
+
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{en-co-dings}
+\hyphenation{per-mi-ssions}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+%\par{\centering{\Huge Willington \textsc{Vega}}\bigskip\par}
+\par{\centering{\Huge Willigton \textsc{Vega}}\par}
+\par{\centering{Julio 2010}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Datos Personales}
+\begin{tabular}{rl}
+    \textsc{Fecha y Lugar de Nacimiento:} & Antioquia, Colombia  | Agosto 24 de 1988 \\
+    \textsc{Dirección:}   & Calle 39A 110-240 INT 301\\
+    \textsc{Teléfono:}     & +57 4 4960767\\
+    \textsc{Celular:} & +57 316 632 61 98\\
+    \textsc{email:}     & \href{mailto:wvega@wvega.com}{wvega@wvega.com}\\
+    \textsc{Sitio Web:}  & \href{http://wvega.com/}{http://wvega.com/}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Experiencia Laboral}
+\begin{tabular}{r|p{11cm}}
+    \textsc{Jun 2008-Jul 2009} & Desarrollador Web en \textsc{WeThink Marketing}, Medellín \\&\emph{Desarollo Web}\\&\footnotesize{Desarrollé aplicaciones y páginas web para clientes locales y del exterior (Utilizando tecnologías y herramientas como \textit{PHP, Python, JavaScript, HTML y CSS}, Configuré entornos de pruebas y producción en Servidores Privados Virtuales (VPS), instalé directorios LDAP, servicios de correo y otras aplicaciones de uso interno para la empresa.}%\\\multicolumn{2}{c}{} \\
+\end{tabular}
+
+%Section: Education
+\section{Educación}
+\begin{tabular}{rl}	
+\textsc{Junio} 2010 & Pregrado  en \textsc{Ingeniería de Sistemas} e \textsc{Informática}\\
+& \textbf{Universidad Nacional de Colombia}, Medellín, Colombia\\
+& Semestre: 10/10\\&\\
+
+\textsc{Deciembre} 2004 & \textbf{Institución Educativa Liceo Antioqueño}, Bello, Colombia\\&\\
+
+\end{tabular}
+
+%Section: Scholarships and additional info
+%\section{Scholarships and Certificates}
+%\begin{tabular}{rl}
+% \textsc{Sept.} 2006 & Scholarship for graduate students with an outstanding curriculum \footnotesize(\EURcr 30,000)\normalsize\\
+%\textsc{June} 2006 & {\textsc{Gmat}\textregistered}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}: 730 (\textsc%{q:50;v:39}) 96\textsuperscript{th} percentile; \textsc{awa}: 6.0/6.0 (89\textsuperscript{th} percentile)
+%\end{tabular}
+
+%Section: Languages
+\section{Idiomas}
+\begin{tabular}{rl}
+ \textsc{Spanish:}&Lengua madre\\
+\textsc{English:}&Conocimiento medio\\
+\end{tabular}
+
+\section{Habilidades Técnicas}
+\begin{tabular}{rl}
+ Programación:& PHP, Python, JavaScript, C, C++, Java, Unix shell scripting, R,\\
+ & PL/SQL, Git, SVN, HTML, CSS.\\
+ Servicios y Tecnología de la Información:& Apache, MySQL, SMTP, LDAP.\\
+ Aplicaciones:& Paquetes ofimaticos mas conocidos para Windows y Linux (Office y OpenOffice),\\
+ & \LaTeX, Vim, NetBeans, Eclipse.\\
+ Sistemas Operativos:& Linux, Microsoft Windows (XP, Vista, 7), Mac OSX.
+\end{tabular}
+
+\section{Actividades e Intereses}
+Programación, Linux, Web, Open-Source, Technología\\
+Tennis, Web Comics, Sci-fi\\
+
+\newpage
+
+\section{Proyectos}
+\begin{tabular}{r|p{13cm}}
+ \textsc{2010} & Blog Personal\\
+ & \emph{Diseño Web y Desarrollo}\\
+ & \footnotesize{Personalización de Wordpress. Instalación y configuración de plugins.}\\
+ & \textsc{Skills:} PHP, jQuery, HTML, CSS, Wordpress, Google Analytics, FeedBurner\\
+ & \href{http://wvega.com/blog/}{http://wvega.com/blog/}\\\multicolumn{2}{c}{} \\
+
+ \textsc{2009} & VideoDiary\\
+ & \emph{Responsable del proyecto y programador principal}\\
+ & \footnotesize{Una aplicación web escrita en PHP y jQuery usando el framewok CakePHP y la librería PHP Video Toolkit}\\
+ & \textsc{Características principales:} \footnotesize{generación automática de thumbnails para videos e imágenes, soporte para diferentes formatos de video e imágenes, conversión automática de los videos a formato FLV, cuatro roles de usuarios, administración inline y comportamientos AJAX para la mayoria de las acciones disponibles.}\\
+ & \textsc{Skills:} PHP, jQuery, HTML, CSS, ffmpeg, Apache, MySQL\\\multicolumn{2}{c}{} \\
+
+ \textsc{2007} & QtOctave\\
+ & \emph{Desarrollador Asociado}\\
+ & \footnotesize{QtOctave es una interfaz gráfica de usuario para el lenguaje de alto nivel Octave, diseñado principalmente para realizar cálculos numéricos de forma similar a Matlab. QtOctave simplifica el uso de Octave para los usuarios poco familiarizados con la versión original de este software, basada en comandos.}\\
+ & \textsc{Skills:} C++, Qt\\
+ & \href{https://forja.rediris.es/projects/csl-qtoctave/}{https://forja.rediris.es/projects/csl-qtoctave/}%\\\multicolumn{2}{c}{} \\
+\end{tabular}
+
+\end{document}
