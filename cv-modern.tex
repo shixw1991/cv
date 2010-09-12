@@ -1,0 +1,177 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,letterpaper]{moderncv}
+
+% moderncv themes
+\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{classic}                % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\setlength{\hintscolumnwidth}{4cm}						% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+%\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+% How to change the bibliography heading title
+\renewcommand\refname{Artículos y publicaciones}
+
+% personal data
+\firstname{Willington}
+\familyname{Vega Cardona}
+\title{Willington Vega Cardona}
+\address{Calle 39A \# 110-240 INT 301}{Medellín, Colombia}
+\mobile{316 632 61 98}
+\phone{(+57) 4 496 07 67}
+%\fax{fax (optional)}
+\email{wvega@wvega.com}
+\homepage{http://wvega.com/}
+%\extrainfo{additional information (optional)}
+\photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{Septiembre, 2010}
+
+% to show numerical labels in the bibliography; only useful if you make citations in your resume
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Datos personales}
+\cvline{Cédula de Ciudadanía}{1.128.417.376}
+\cvline{Fecha de Nacimiento}{Agost 24, 1988}
+\cvline{Lugar de Nacimiento}{Granada, Antioquia}
+\cvline{Dirección}{Calle 39A \# 110 - 240 INT 301 $-$ Medellín, Colombia}
+\cvline{Teléfono}{(+57) 4 496 07 67}
+\cvline{Celular}{(+57) 316 632 61 98}
+\cvline{Email}{\href{mailto:wvega@wvega.com}{wvega@wvega.com}}
+\cvline{Página Web}{\href{http://wvega.com/}{http://wvega.com/}}
+
+\section{Formación académica}
+% arguments 3 to 6 can be left empty
+%\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+\cventry{2005--2010}{Ingeniero de Sistemas e Informática}{Universidad Nacional de Colombia}{Medellín}{}{Fecha esperada de graduación: Diciembre 2010}
+
+\section{Logros}
+
+\cvline{ECAES 2009--02}{Ubicado entre los mejores 10 puntajes para Ingeniería de Sistemas en Colombia. Mejor puntaje para Ingeniería de Sistemas e Informática en la Universidad Nacional de Colombia, Sede Medellín.}
+
+\cvline{2010--01}{Ubicado entre los mejores promedios para Ingeniería de Sistemas e Informática en la Universidad Nacional de Colombia, Sede Medellín.}
+
+\newpage
+
+% Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
+\nocite{*}
+\bibliographystyle{ieeetr}
+\bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+\section{Eventos y conferencias}
+\cventry{2008}{3CCC - Tercer Congreso Colombiano de Computación}{Univerisidad EAFIT}{Medellín (Colombia)}{20 horas}{Asistente}
+
+\section{Proyectos}
+
+\cventry{2006--2008}{Construcción de un editor genérico para la elaboración de modelos gráfico simbólicos}{Auxiliar de investigación}{}{(C++)}{
+Ph.D Fernando Arango Isaza (Director del proyecto).\\
+20 horas semanales.}
+
+\cventry{2007}{QtOctave}{Desarrollador asociado}{}{(C++, Qt)}{QtOctave es una interfaz gráfica de usuario para el lenguaje de alto nivel Octave, diseñado principalmente para realizar cálculos numéricos de forma similar a Matlab. QtOctave simplifica el uso de Octave para los usuarios poco familiarizados con la versión original de este software, basada en comandos.\\
+\href{https://forja.rediris.es/projects/csl-qtoctave/}{https://forja.rediris.es/projects/csl-qtoctave/}}
+
+\cventry{2010}{Desarrollo de un generador de preguntas para el curso programación lógica y funcional}{Desarrollador}{}{(PHP)}{
+PETA dirigido por Ph.D Fernando Arango Isaza.\\
+12 horas semanales.}
+
+\newpage
+
+\section{Habilidades}
+
+\subsection{Habilidades informáticas}
+
+\cvcomputer{\textbf{Lenguajes de programación}}{Python, C, C++, PHP, Java, JavaScript, Scheme, MAUDE, R}{\textbf{Servicios}}{Apache, Tomcat,\\ LDAP, DNS, DHCP}
+\cvcomputer{\textbf{Bases de datos}}{MySQL, Oracle, SQLite}{\textbf{Control de versiones}}{Subversion, Git}
+\cvcomputer{\textbf{Entornos de programación}}{NetBeans, Eclipse}{\textbf{Diseño gráfico}}{Inkscape, GIMP,\\ Photoshop}
+\cvcomputer{\textbf{Sistemas operativos}}{GNU Linux (Fedora, Ubuntu,\\ CentOS), Microsoft Windows\\ (XP, Vista, 7)}{\textbf{Herramientas ofimáticas}}{OpenOffice, \\Microsoft Office 2003, \\Microsoft Office 2007}
+
+\section{Idiomas}
+
+\cvlanguage{Español}{Nativo}{}
+\cvlanguage{Inglés}{Nivel Medio}{\textbf{Lectura:} Fluida, \textbf{Escritura:} Fluida, \textbf{Habla:} Nivel Medio}
+
+\section{Interéses}
+
+\cvcomputer{\textbf{Académicos}}{Máquinas de Vectores de Soporte(SVM), Aprendizaje de Máquina, Sistemas Multi-Agente, Investigación para la Web}{\textbf{Profesionales}}{Programación, Linux,\\ Desarrollo Web,\\ OpenSource}
+\cvcomputer{\textbf{Personales}}{Cine, Web Comics, Música, Leer,\\ Viajar, Tenis}{}{}
+
+\newpage
+
+\section{Experiencia laboral}
+
+\cventry{2007--2008}{Estudiante auxiliar}{Universidad Nacional de Colombia}{Medellín}{}{
+Administración del servidor AGORA en la Escuela del Hábitat\\
+Jefe inmediato: Juan Carlos Ceballos.\\
+Teléfono: (+57) 4 430 94 29.\\
+Ene 2007 $-$ Jun 2008}
+
+\cventry{2008--2009}{Desarrollador web}{WeThink Marketing}{Medellin}{}{
+Desarrollo de aplicaciones y páginas web para clientes locales y del exterior utilizando tecnologías y herramientas como PHP, Python, JavaScript, HTML y CSS. Configuración de entornos de pruebas y producción en Servidores Privados Virtuales (VPS) bajo Linux. Instalación de directorio LDAP, servicios de correo y otras aplicaciones de uso interno.\\
+Jefe inmediato: Carlos Aguirre.\\
+Teléfono: (+57) 4 448 03 00.\\
+Jul 2008 $-$ Jun 2009}
+
+\cventry{2009--2010}{Monitor académico para la asignatura \emph{Programación Lógica y Funcional}}{Universidad Nacional de Colombia}{Medellín}{}{
+2009-01, 2009-02, 2010-01, 2010-02}
+
+\newpage
+
+\section{Referencias personales}
+
+\bigskip
+
+\cventry{}{Efrain Rodas}{Título}{}{}{
+Cargo\\
+BANACOL\\
+Teléfono: (+57) 4 ??? ?? ??}
+
+\bigskip
+
+\cventry{}{Jorge A. Torres Henao}{Matemático}{}{}{
+Jefe de Desarrollo\\
+SINAPSIS\\
+Teléfono: (+57) 4 338 14 48}
+
+\bigskip
+
+\cventry{}{Carlos E. Mejía Salar}{Ph.D}{}{}{
+Profesor Asociado Escuela de Matemáticas\\
+Universidad Nacional de Colombia, Sede Medellín\\
+Teléfono: (+57) 4 430 93 23\\ 
+\hspace*{1.5cm}(+57) 4 430 93 55}
+
+\bigskip
+
+\cventry{}{Fernando Arango Isaza}{Ph.D}{}{}{
+Profesor Asociado Escuela de Sistemas\\
+Universidad Nacional de Colombia, Sede Medellín\\
+Teléfono: (+57) 4 425 53 30}
+
+\end{document}
+
+
+%% end of file `template_en.tex'.
